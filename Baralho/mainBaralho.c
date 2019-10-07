@@ -9,6 +9,7 @@ int main(){
 	criaBaralho(B);
 	mostraBaralho(B);
 	
+	printf("eai");
 	printf("..................INSTRUCOES..................\n");
 	printf("Numero das cartas:\n1 para AS, 11 para J, 12 para Q e 13 para K.\n\n");
 	printf("Naipe das cartas:\n1 para Ouro, 2 para Copas, 3 para Espadas e 4 para Paus\n\n");
