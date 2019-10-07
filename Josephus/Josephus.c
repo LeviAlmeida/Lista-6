@@ -20,18 +20,18 @@ void criaCircular(LISTA *L){							//Inicializa a lista.
 	L->inicio = NULL;
 	L->final = NULL;
 }
-
-void inserirCircular(LISTA *L, ELEM *novo, int posicao){    //l é a cabeça da lista
-    ELEM *p = L->inicio;                                    //p recebe o endereço da cabeça.
+//vrau
+void inserirCircular(LISTA *L, ELEM *novo, int posicao){    //l Ã© a cabeÃ§a da lista
+    ELEM *p = L->inicio;                                    //p recebe o endereÃ§o da cabeÃ§a.
     ELEM *pp = NULL;
     if(L->inicio == NULL){                                     //Se a lista for vazia.
         L->inicio = novo; 
         L->final = novo; 
         novo->prox = L->inicio;
     }
-    if(posicao > 1 && L->tamanho > 0){                        //Se a posição for maior que 1 e a lista não for vazia.
+    if(posicao > 1 && L->tamanho > 0){                        //Se a posiÃ§Ã£o for maior que 1 e a lista nÃ£o for vazia.
         int i = 1;
-        while(i < posicao-1 || p->prox != L->inicio){        //Percorre até uma posição anterior a desejada.
+        while(i < posicao-1 || p->prox != L->inicio){        //Percorre atÃ© uma posiÃ§Ã£o anterior a desejada.
             p = p->prox;
             i++;
         }
@@ -39,13 +39,13 @@ void inserirCircular(LISTA *L, ELEM *novo, int posicao){    //l é a cabeça da li
         L->final = novo;                                    //lista final aponta para novo.
     }
     novo->prox = p->prox;                                    //novo aponta para o elemento.
-    p->prox = novo;                                            //o elemento de posição anterior a desejada aponta para p.
+    p->prox = novo;                                            //o elemento de posiÃ§Ã£o anterior a desejada aponta para p.
 
     }
     else if(posicao = 1 && L->tamanho > 0){
         novo->prox = p->prox;                                //Novo aponta para o elemento.
         p->prox = novo;                                        //O elemento final aponta para p.
-        L->inicio = novo;                                    //A cabeça aponta para p.
+        L->inicio = novo;                                    //A cabeÃ§a aponta para p.
     }
     L->tamanho ++;
 }
